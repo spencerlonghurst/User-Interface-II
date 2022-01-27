@@ -1,1 +1,129 @@
-/* Add CSS styling here */
+
+/*General Styles*/
+
+* {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    /* border: 1px solid red; */
+}
+
+a {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 1% 2%;
+    background-color: white;
+    color: black;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+/*Header Styles*/
+
+
+header {
+    border-bottom: 1px solid black;
+}
+
+header nav .navigaton {
+    background-color: red;
+}
+
+header h1 {
+    margin: 2%;
+}
+
+.buttons {
+    padding: 20px;
+    display: flex;
+}
+
+
+.home {
+    
+}
+
+
+/*My Info Styles*/
+
+
+.cta {
+    display: flex;
+}
+
+.main-img img, .my-info h2 {
+    /* display: inline-block; */
+    /* display: flex; */
+}
+
+
+.info {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+
+.main-img img {
+    /* width: 100%; */
+    border-radius: 20%;
+}
+.main-img {
+    /* width: 100%; */
+    justify-content: center;
+}
+
+.my-info {
+    text-align: center;
+    /* display: flex; */
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*Photos styles*/
+
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container4 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+
+
+
+
+
+/*Footer Styles*/
+
+
+
+footer div {
+    background-color: lightgray;
+    display: flex;
+}
