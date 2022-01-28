@@ -1,49 +1,126 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/* border: 0; */
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*General Styles*/
 
+
 * {
-    background-color: white;
     font-family: 'Roboto', sans-serif;
-    /* border: 1px solid red; */
+    /* border: 1px solid gray; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;        /*THIS IS AN IMPORTANT ONE!!!!!!!!!!!!!!!!*/
+}
+html {
+    font-size: 62.5;
 }
 
-a {
-    text-decoration: none;
+body {
+    line-height: 1.5;
+}
+
+button {
     border: 1px solid black;
     padding: 1% 2%;
     background-color: white;
     color: black;
 }
 
-a:hover {
+button:hover {
     background-color: black;
     color: white;
+    border: 1px solid white;
 }
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
 
 /*Header Styles*/
 
 
 header {
     border-bottom: 1px solid black;
-}
-
-header nav .navigaton {
-    background-color: red;
+    background-color: skyblue;
+    margin-bottom: 1.5%;
+    padding: 2%;
 }
 
 header h1 {
-    margin: 2%;
-}
-
-.buttons {
-    padding: 20px;
-    display: flex;
+    font-size: 2.8rem;
+    padding: 1%
 }
 
 
-.home {
-    
-}
+
 
 
 /*My Info Styles*/
@@ -51,39 +128,27 @@ header h1 {
 
 .cta {
     display: flex;
-}
-
-.main-img img, .my-info h2 {
-    /* display: inline-block; */
-    /* display: flex; */
-}
-
-
-.info {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-}
-
-
-.main-img img {
-    /* width: 100%; */
-    border-radius: 20%;
-}
-.main-img {
-    /* width: 100%; */
+    flex-direction: row;
     justify-content: center;
+    padding: 2%;
 }
 
 .my-info {
-    text-align: center;
-    /* display: flex; */
-    align-items: center;
+    padding: 2%
 }
 
+.my-info h2 {
+    font-size: 1.8rem;
+    padding: 2%;
+}
 
+.my-info button {
+    margin: 2%;
+}
 
-
-
+.my-info p {
+    padding: 2%;
+}
 
 
 
@@ -92,27 +157,14 @@ header h1 {
 /*Photos styles*/
 
 
-.container1 {
+.pics-row {
     display: flex;
-    justify-content: space-around;
-    margin-top: 3%;
+    justify-content: space-evenly;
+    padding: 2%;
 }
 
-.container2 {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 3%;
-}
-
-.container3 {
-    display: flex;
-    justify-content: space-around;
-}
-
-.container4 {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 3%;
+.pics-element {
+    text-align: center;
 }
 
 
@@ -122,8 +174,83 @@ header h1 {
 /*Footer Styles*/
 
 
-
-footer div {
+footer {
     background-color: lightgray;
-    display: flex;
+    text-align: center;
+    padding: 2%;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+
+    .pics-element {
+        margin: 2%;
+    }
+    
+    .cta img {
+        width: 40%;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 500px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    button {
+        width: 40%;
+        margin: 1% 0%;
+    }
+
+    .cta {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%
+    }
+
+    .pics-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        /* border: 1px solid red; */
+    }
+
+    .pics-element {
+        width: 40%;
+        margin: 4% 0%;
+        justify-content: space-evenly;
+        /* border: 1px solid green; */
+    }
+
 }
